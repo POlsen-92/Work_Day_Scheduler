@@ -47,4 +47,4 @@ THEN the saved events persist
 
 ![Screenshot of program](./Screenshot.png)
 
-https://polsen-92.github.io/Work_Day_Scheduler/
+Link to the Deployed Site: https://polsen-92.github.io/Work_Day_Scheduler/
