@@ -4,35 +4,43 @@ var textAreaEl = $("#task");
 var hourEl = $('#hour')
 var savebtn= $('.savebtn')
 
-// textAreaEl.parents().siblings().children('textarea').text('Hello')
-// currentDayEl.text('Hello')
+renderTask();
 
-var currentTime = moment().format("h:m")
+var currentTime = moment().format("H")
 console.log(currentTime)
 
-renderTask()
+color();
 //Create currentDay heading using moment
 var currentDay = moment();
 $("#currentDay").text(currentDay.format("MMM Do, YYYY"));
 
 //Use conditionals and current time to append classes (past, present and future) as the background image to the textArea 
 
-
+function color() {
+    for (let i = 9; i <= 17; i++) {
+        var hourID = ($("#" + i).attr("id"))
+        console.log(hourID)
+        if (hourID === currentTime) {
+            $("#" + i).addClass("present");
+        } else if (hourID < currentTime) {
+            $("#" + i).addClass("past")
+        } else if (hourID > currentTime) {
+            $("#" + i).addClass("future")
+        }
+    }
+}
 
 //On click of the 'savebtn' any text within the textarea will be saved to local storage and rendered to the textarea upon loading the page
 
-//closest can be used to 
-
 savebtn.click(function(event) {
-    console.log($(event.target).prev())
-    console.log(savebtn)
     var task = $(event.target).prev().val();
-    console.log('Task:', task)
-    localStorage.setItem("taskData", JSON.stringify(task))
+    var hourID = $(event.target).prev().attr("id")
+    localStorage.setItem(hourID, task)
 })
 
-
 function renderTask() {
-    var taskData = JSON.parse(localStorage.getItem("taskData"))
-    savebtn.closest(textAreaEl).append(taskData)
+    for (let i = 9; i <= 17; i++) {
+        var getTask = localStorage.getItem(i);
+        $('#' + i).val(getTask);
+    }
 }
