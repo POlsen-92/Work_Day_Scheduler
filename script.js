@@ -4,28 +4,28 @@ var textAreaEl = $("#task");
 var hourEl = $('#hour')
 var savebtn= $('.savebtn')
 
-renderTask();
-
-var currentTime = moment().format("H")
-console.log(currentTime)
-
-color();
 //Create currentDay heading using moment
 var currentDay = moment();
 $("#currentDay").text(currentDay.format("MMM Do, YYYY"));
 
-//Use conditionals and current time to append classes (past, present and future) as the background image to the textArea 
+//Create current time in order to compare for addClass
+var currentTime = moment().format("H")
 
+
+//Run functions to load saved local storage and color of textArea
+renderTask();
+color();
+
+//Use conditionals and current time to append classes (past, present and future) as the background image to the textArea 
 function color() {
-    for (let i = 9; i <= 17; i++) {
-        var hourID = ($("#" + i).attr("id"))
-        console.log(hourID)
-        if (hourID === currentTime) {
-            $("#" + i).addClass("present");
-        } else if (hourID < currentTime) {
-            $("#" + i).addClass("past")
-        } else if (hourID > currentTime) {
-            $("#" + i).addClass("future")
+    for (let hour = 9; hour <= 17; hour++) {
+        console.log(hour)
+        if (hour == currentTime) {
+            $("#" + hour).addClass("present");
+        } else if (hour < currentTime) {
+            $("#" + hour).addClass("past")
+        } else if (hour > currentTime) {
+            $("#" + hour).addClass("future")
         }
     }
 }
