@@ -48,9 +48,9 @@ THEN the saved events persist
 ![Screenshot of program](./images/scheduler_SS.png)
 
 ## Credits
-Built with [BootStrap](https://getbootstrap.com/) and [jQuery](https://jquery.com/)
+Built with [BootStrap](https://getbootstrap.com/), [Moment](https://momentjs.com/) and [jQuery](https://jquery.com/)
 
-Fonts from [Google Fonts](https://fonts.google.com/)
+Fonts from [Google Fonts](https://fonts.google.com/) and [Font Awesome](https://fontawesome.com/)
 
 Deployed with GitHub
 
