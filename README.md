@@ -1,4 +1,4 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
 ## Work Description
  
@@ -45,6 +45,25 @@ THEN the saved events persist
 
 ## ScreenShot of Program
 
-![Screenshot of program](./Screenshot.png)
+![Screenshot of program](./images/scheduler_SS.png)
 
-Link to the Deployed Site: https://polsen-92.github.io/Work_Day_Scheduler/
+## Credits
+Built with [BootStrap](https://getbootstrap.com/) and [jQuery](https://jquery.com/)
+
+Fonts from [Google Fonts](https://fonts.google.com/)
+
+Deployed with GitHub
+
+Link to the Deployed Site: [WorkDay Scheduler](https://polsen-92.github.io/Work_Day_Scheduler/)
+
+## License
+
+MIT license 
+Copyright © 2020
+
+## Creator
+
+<img src="./images/cover_photo.jpg" width="100px"> <br>
+Paige Olsen
+[Github](https://github.com/POlsen-92) ,
+[LinkedIn](https://www.linkedin.com/in/paige-olsen-2aba9685/)
